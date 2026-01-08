@@ -12,7 +12,21 @@
 
 ---
 
-##  4. Estructura del Proyecto
+##  1. Descripción
+PetFect es una aplicación diseñada para facilitar la adopción responsable de mascotas y ayudar a encontrar animales perdidas. Su objetivo principal es conectar adoptantes, propietarios y refugios en una red solidaria y confiable, utilizando tecnologías modernas como geolocalización y alertas en tiempo real.
+
+---
+
+##  2.Funcionalidades
+Consulta de animales perdidos: Busca mascotas perdidas en tu zona.
+Adopciones: Visualiza animales disponibles para adopción en refugios cercanos.
+Mapa interactivo: Localiza mascotas perdidas y veterinarias cercanas.
+Registro y perfil de usuario: Permite guardar tus búsquedas y favoritos.
+Notificaciones: Recibe alertas sobre animales encontrados cerca de ti.
+
+--- 
+
+##  3. Estructura del Proyecto
 
 PetFect/
 ├── AndroidManifest.xml
@@ -34,7 +48,7 @@ PetFect/
 
 ---
 
-##  6. Licencia
+##  4. Licencia
 
 Este proyecto está licenciado bajo **Creative Commons Atribución-CompartirIgual 4.0 Internacional**.  
 [![CC BY-SA 4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
