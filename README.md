@@ -26,7 +26,16 @@ Notificaciones: Recibe alertas sobre animales encontrados cerca de ti.
 
 --- 
 
-##  3. Estructura del Proyecto
+##  3.Tecnologías utilizadas
+Plataforma: Android
+Lenguaje de programación: Java / Kotlin
+IDE: Android Studio
+Bases de datos: API de refugios y veterinarias
+Otros: Google Maps API, notificaciones push
+
+---
+
+##  4. Estructura del Proyecto
 
 PetFect/
 ├── AndroidManifest.xml
