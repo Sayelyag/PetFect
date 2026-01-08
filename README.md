@@ -64,6 +64,9 @@ PetFect/
 
 ---
 
+
+<img width="1383" height="765" alt="image" src="https://github.com/user-attachments/assets/fc34b954-b5a2-43b1-8354-a52894b076ea" />
+
 ##  4. Licencia
 
 Este proyecto está licenciado bajo **Creative Commons Atribución-CompartirIgual 4.0 Internacional**.  
