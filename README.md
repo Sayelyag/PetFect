@@ -44,22 +44,27 @@ Sara Ulgazi
 ---
 ##  5. Estructura del Proyecto
 
+## 5. Estructura del Proyecto
+
+```
 PetFect/
 ├── AndroidManifest.xml
 ├── java/com.petfect/
-│ ├── MainActivity.java
-│ ├── Login.java
-│ ├── Signup.java
-│ ├── Splash.java
-│ └── Profile.java
+│   ├── MainActivity.java
+│   ├── Login.java
+│   ├── Signup.java
+│   ├── Splash.java
+│   └── Profile.java
 ├── res/
-│ ├── layout/
-│ ├── menu/
-│ ├── drawable/
-│ ├── anim/
-│ ├── color/
-│ └── values/
+│   ├── layout/
+│   ├── menu/
+│   ├── drawable/
+│   ├── anim/
+│   ├── color/
+│   └── values/
 └── Gradle Scripts/
+```
+
 
 
 ---
