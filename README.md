@@ -63,7 +63,8 @@ PetFect/
 
 
 ---
-
+##  6. Enlace al prototipo en Figma:  
+https://www.figma.com/design/06eBS84aSirWxt0tDWtGxG/PetFect?node-id=0-1&t=PAzMS1DZz4Tj30AR-1
 
 <img width="1383" height="765" alt="image" src="https://github.com/user-attachments/assets/fc34b954-b5a2-43b1-8354-a52894b076ea" />
 
