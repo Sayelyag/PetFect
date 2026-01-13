@@ -35,29 +35,45 @@ Otros: Google Maps API, notificaciones push
 
 ---
 
-##  4. Estructura del Proyecto
+##  4.Equipo de desarrollo
 
+Ainoha Yubero
+Patricia Paun
+Sara Ulgazi
+
+---
+##  5. Estructura del Proyecto
+
+## 5. Estructura del Proyecto
+
+```
 PetFect/
 ├── AndroidManifest.xml
 ├── java/com.petfect/
-│ ├── MainActivity.java
-│ ├── Login.java
-│ ├── Signup.java
-│ ├── Splash.java
-│ └── Profile.java
+│   ├── MainActivity.java
+│   ├── Login.java
+│   ├── Signup.java
+│   ├── Splash.java
+│   └── Profile.java
 ├── res/
-│ ├── layout/
-│ ├── menu/
-│ ├── drawable/
-│ ├── anim/
-│ ├── color/
-│ └── values/
+│   ├── layout/
+│   ├── menu/
+│   ├── drawable/
+│   ├── anim/
+│   ├── color/
+│   └── values/
 └── Gradle Scripts/
+```
+
 
 
 ---
+##  6. Enlace al prototipo en Figma:  
+https://www.figma.com/design/06eBS84aSirWxt0tDWtGxG/PetFect?node-id=0-1&t=PAzMS1DZz4Tj30AR-1
 
-##  5. Licencia
+<img width="1383" height="765" alt="image" src="https://github.com/user-attachments/assets/fc34b954-b5a2-43b1-8354-a52894b076ea" />
+
+##  4. Licencia
 
 Este proyecto está licenciado bajo **Creative Commons Atribución-CompartirIgual 4.0 Internacional**.  
 [![CC BY-SA 4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
