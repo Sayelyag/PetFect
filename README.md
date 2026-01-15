@@ -59,15 +59,23 @@ PetFect/
 │   ├── Login.java
 │   ├── Signup.java
 │   ├── Splash.java
-│   └── Profile.java
+│   ├── Profile.java
+│   └── PreferenciasActivity.java
 ├── res/
 │   ├── layout/
+│   │   ├── activity_main.xml
+│   │   ├── activity_login.xml
+│   │   ├── activity_signup.xml
+│   │   ├── activity_profile.xml
+│   │   ├── activity_preferencias.xml
+│   │   └── splash.xml
 │   ├── menu/
 │   ├── drawable/
 │   ├── anim/
 │   ├── color/
 │   └── values/
 └── Gradle Scripts/
+
 ```
 
 
