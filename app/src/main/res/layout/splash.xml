@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <ImageView
         android:id="@+id/backView"
         android:layout_width="match_parent"
@@ -20,6 +19,17 @@
         android:src="@drawable/icono"
         tools:layout_editor_absoluteX="116dp"
         tools:layout_editor_absoluteY="408dp" />
-</ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@id/img"
+        app:layout_constraintStart_toStartOf="@id/img"
+        app:layout_constraintTop_toBottomOf="@id/img">
+
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
