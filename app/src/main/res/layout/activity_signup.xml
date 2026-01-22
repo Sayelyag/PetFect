@@ -5,15 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/signup_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:layout_height="match_parent">
 
     <!-- IMAGEN TRANSLÚCIDA ENCIMA DEL DEGRADADO, se usa alpha -->
     <ImageView
         android:id="@+id/overlay_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/img1"
+        android:src="@drawable/imgfondo"
         android:scaleType="centerCrop"
         android:alpha="0.35"
         app:layout_constraintTop_toTopOf="parent"
@@ -84,7 +83,7 @@
         android:id="@+id/icon_signup"
         android:layout_width="216dp"
         android:layout_height="195dp"
-        android:src="@drawable/img"
+        android:src="@drawable/icono"
         app:layout_constraintTop_toTopOf="@id/guideline_top"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
@@ -177,7 +176,7 @@
         android:backgroundTint="@color/button_custom"
         android:onClick="OpenLogin"
         android:text="CREATE ACCOUNT"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/tilEmail" />
