@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Nombre usuario (lo cambias desde Java con SharedPreferences) -->
+    <!-- Nombre usuario -->
     <TextView
         android:id="@+id/tvNombreUsuario"
         android:layout_width="0dp"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- ====== TU BLOQUE (MISMO CONTENIDO), SOLO LE AÑADO CONSTRAINTS + ID ====== -->
+    <!-- ACTION BAR HORIZONTAL -->
     <HorizontalScrollView
         android:id="@+id/hsOpciones"
         android:layout_width="0dp"
@@ -58,34 +58,35 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All" />
+                android:text="All"/>
 
             <Button
+                android:id="@+id/btnAdopciones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Adopciones" />
+                android:text="Adopciones"/>
 
             <Button
+                android:id="@+id/btnPerdidos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Lost" />
+                android:text="Lost"/>
 
             <Button
+                android:id="@+id/btnMapa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Mapa" />
-
+                android:text="Mapa"/>
         </LinearLayout>
     </HorizontalScrollView>
-    <!-- ===================================================================== -->
 
-    <!-- Contenido de abajo (para que quede como el mockup).
-         Aquí luego metes tus RecyclerViews / cards / listas. -->
+    <!-- CONTENIDO -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollContenido"
         android:layout_width="0dp"
@@ -102,48 +103,64 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Ejemplo de título tipo mockup -->
-            <LinearLayout
+            <!-- MENSAJE CUANDO NO HAY NADA -->
+            <TextView
+                android:id="@+id/tvNadaSeleccionado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:text="No hay contenido disponible"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_marginTop="24dp"/>
+
+            <!-- ====== SECCIÓN PERDIDOS ====== -->
+            <LinearLayout
+                android:id="@+id/sectionPerdidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="Recientemente"
                     android:textStyle="bold"
                     android:textSize="16sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ver todo"/>
             </LinearLayout>
 
-            <!-- Aquí luego pones tu RecyclerView horizontal -->
-            <!-- <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvRecientes"
+            <!-- ====== SECCIÓN ADOPCIONES ====== -->
+            <LinearLayout
+                android:id="@+id/sectionAdopciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"/> -->
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="Sin Encontrar"
-                android:textStyle="bold"
-                android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adopciones"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
 
-            <!-- Aquí luego pones tu lista vertical -->
-            <!-- <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvSinEncontrar"
+            <!-- ====== SECCIÓN VETERINARIAS / MAPA ====== -->
+            <LinearLayout
+                android:id="@+id/sectionVeterinarias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"/> -->
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mapa / Veterinarias"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
