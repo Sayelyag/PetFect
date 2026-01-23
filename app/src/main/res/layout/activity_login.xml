@@ -53,10 +53,8 @@
         android:layout_height="195dp"
         android:scaleType="centerCrop"
         android:src="@drawable/icono"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="103dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilUser"
