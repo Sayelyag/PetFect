@@ -19,9 +19,9 @@ public class MainBab extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_bab);
+        setContentView(R.layout.activity_bab);
 
-        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
+        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar_menu);
         FloatingActionButton fab = findViewById(R.id.floating_action_button);
 
         // FAB
