@@ -2,13 +2,11 @@ package com.aipasa;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -21,7 +19,7 @@ public class MainBab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bab);
 
-        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar_menu);
+        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
         FloatingActionButton fab = findViewById(R.id.floating_action_button);
 
         // FAB
