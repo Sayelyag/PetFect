@@ -1,6 +1,5 @@
 package com.aipasa;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -14,50 +13,88 @@ public class MainActivity extends AppCompatActivity {
     private View sectionPerdidos, sectionAdopciones, sectionVeterinarias;
     private TextView tvNadaSeleccionado;
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//
-//        sectionPerdidos = findViewById(R.id.sectionPerdidos);
-//        sectionAdopciones = findViewById(R.id.sectionAdopciones);
-//        sectionVeterinarias = findViewById(R.id.sectionVeterinarias);
-//        tvNadaSeleccionado = findViewById(R.id.tvNadaSeleccionado);
-//
-//        Button btnOpenPreferencias = findViewById(R.id.btnOpenPreferencias);
-//        btnOpenPreferencias.setOnClickListener(v ->
-//                startActivity(new Intent(MainActivity.this, PreferenciasActivity.class))
-//        );
-//
-//        aplicarPreferencias();
-//    }
+    private boolean prefPerdidos, prefAdopciones, prefVeterinarias;
+
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        aplicarPreferencias(); // se actualiza al volver de Preferencias
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_bab);
     }
 
-    private void aplicarPreferencias() {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Secciones
+        sectionPerdidos = findViewById(R.id.sectionPerdidos);
+        sectionAdopciones = findViewById(R.id.sectionAdopciones);
+        sectionVeterinarias = findViewById(R.id.sectionVeterinarias);
+        tvNadaSeleccionado = findViewById(R.id.tvNadaSeleccionado);
+
+        // Botones action bar
+        Button btnAll = findViewById(R.id.btnAll);
+        Button btnAdopciones = findViewById(R.id.btnAdopciones);
+        Button btnPerdidos = findViewById(R.id.btnPerdidos);
+        Button btnMapa = findViewById(R.id.btnMapa);
+
+        cargarPreferencias();
+
+        // Estado inicial → ALL
+        mostrarAll();
+
+        btnAll.setOnClickListener(v -> mostrarAll());
+        btnAdopciones.setOnClickListener(v -> mostrarSoloAdopciones());
+        btnPerdidos.setOnClickListener(v -> mostrarSoloPerdidos());
+        btnMapa.setOnClickListener(v -> mostrarSoloVeterinarias());
+    }
+
+    private void cargarPreferencias() {
         SharedPreferences prefs = getSharedPreferences("petfect_prefs", MODE_PRIVATE);
+        prefPerdidos = prefs.getBoolean("pref_perdidos", false);
+        prefAdopciones = prefs.getBoolean("pref_adopciones", false);
+        prefVeterinarias = prefs.getBoolean("pref_veterinarias", false);
+    }
 
-        boolean verPerdidos = prefs.getBoolean("pref_perdidos", false);
-        boolean verAdopciones = prefs.getBoolean("pref_adopciones", false);
-        boolean verVeterinarias = prefs.getBoolean("pref_veterinarias", false);
+    private void mostrarAll() {
+        sectionPerdidos.setVisibility(prefPerdidos ? View.VISIBLE : View.GONE);
+        sectionAdopciones.setVisibility(prefAdopciones ? View.VISIBLE : View.GONE);
+        sectionVeterinarias.setVisibility(prefVeterinarias ? View.VISIBLE : View.GONE);
 
-        sectionPerdidos.setVisibility(verPerdidos ? View.VISIBLE : View.GONE);
-        sectionAdopciones.setVisibility(verAdopciones ? View.VISIBLE : View.GONE);
-        sectionVeterinarias.setVisibility(verVeterinarias ? View.VISIBLE : View.GONE);
+        mostrarMensajeSiNada();
+    }
 
-        // Si no ha marcado nada, mostramos un mensaje
-        boolean nada = !verPerdidos && !verAdopciones && !verVeterinarias;
-        tvNadaSeleccionado.setVisibility(nada ? View.VISIBLE : View.GONE);
+    private void mostrarSoloPerdidos() {
+        sectionPerdidos.setVisibility(prefPerdidos ? View.VISIBLE : View.GONE);
+        sectionAdopciones.setVisibility(View.GONE);
+        sectionVeterinarias.setVisibility(View.GONE);
 
-        // Si mostramos el mensaje, ocultamos las secciones
-        if (nada) {
-            sectionPerdidos.setVisibility(View.GONE);
-            sectionAdopciones.setVisibility(View.GONE);
-            sectionVeterinarias.setVisibility(View.GONE);
-        }
+        mostrarMensajeSiNada();
+    }
+
+    private void mostrarSoloAdopciones() {
+        sectionPerdidos.setVisibility(View.GONE);
+        sectionAdopciones.setVisibility(prefAdopciones ? View.VISIBLE : View.GONE);
+        sectionVeterinarias.setVisibility(View.GONE);
+
+        mostrarMensajeSiNada();
+    }
+
+    private void mostrarSoloVeterinarias() {
+        sectionPerdidos.setVisibility(View.GONE);
+        sectionAdopciones.setVisibility(View.GONE);
+        sectionVeterinarias.setVisibility(prefVeterinarias ? View.VISIBLE : View.GONE);
+
+        mostrarMensajeSiNada();
+    }
+
+    private void mostrarMensajeSiNada() {
+        boolean nadaVisible =
+                sectionPerdidos.getVisibility() == View.GONE &&
+                        sectionAdopciones.getVisibility() == View.GONE &&
+                        sectionVeterinarias.getVisibility() == View.GONE;
+
+        tvNadaSeleccionado.setVisibility(nadaVisible ? View.VISIBLE : View.GONE);
     }
 }
