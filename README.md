@@ -31,7 +31,7 @@ Notificaciones: Recibe alertas sobre animales encontrados cerca de ti.
 | Pantalla | Imagen | Descripción |
 |----------|-------|------------|
 | Uso de la app |  |
-| Splash / Principal | |
+| Splash / Principal |https://github.com/user-attachments/assets/b482af67-cb6c-406d-be81-31d7852562f8|
 | Icono app || icono de la aplicación |
 | Login |<img width="272" height="605" alt="Captura de pantalla 2026-01-30 125248" src="https://github.com/user-attachments/assets/af41a17c-0108-4cc9-93e2-e25718540d8e" />
 | Login con campos y botones de navegación |
