@@ -49,8 +49,8 @@
 
     <ImageView
         android:id="@+id/iconopng"
-        android:layout_width="204dp"
-        android:layout_height="191dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_marginTop="45dp"
         android:src="@drawable/logologin"
         app:layout_constraintEnd_toEndOf="parent"
