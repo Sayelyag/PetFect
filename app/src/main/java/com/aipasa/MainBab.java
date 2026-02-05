@@ -4,7 +4,6 @@ package com.aipasa;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -22,11 +21,11 @@ public class MainBab extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bab);
+        setContentView(R.layout.activity_mainbab);
 
 
         BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
-        FloatingActionButton fab = findViewById(R.id.floating_action_button);
+        FloatingActionButton fab = findViewById(R.id.fab_central);
 
 
         // FAB
@@ -56,7 +55,7 @@ public class MainBab extends AppCompatActivity {
     // BottomSheet
     private void showBottomSheetDialog() {
         View view = LayoutInflater.from(this)
-                .inflate(R.layout.activity_bab, null);
+                .inflate(R.layout.activity_mainbab, null);
 
 
         BottomSheetDialog dialog = new BottomSheetDialog(this);
