@@ -49,8 +49,8 @@
 
     <ImageView
         android:id="@+id/iconopng"
-        android:layout_width="204dp"
-        android:layout_height="191dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_marginTop="45dp"
         android:src="@drawable/logologin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,10 +74,10 @@
             android:id="@+id/etUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="49dp"
             android:inputType="textPersonName"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"/>
+            android:paddingStart="49dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -106,11 +106,11 @@
 
     <Button
         android:id="@+id/login"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        style="@style/BotonPetFect"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/cian_botones"
         android:backgroundTintMode="@color/white"
         android:onClick="SignLogin"
         android:text="LOGIN"
