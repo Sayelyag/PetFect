@@ -89,5 +89,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cbNotificaciones"
         style="@style/BotonPetFect"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
